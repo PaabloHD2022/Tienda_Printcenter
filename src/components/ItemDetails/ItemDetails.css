@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Montserrat:wght@300&family=Roboto+Condensed:wght@300;400&display=swap');
+
+.Card_Item_Selected{
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid rgb(185, 185, 185);
+    border-radius: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 50px auto;
+    padding: 30px;
+
+}
+
+.Card_Item_Selected:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info_card2{
+    display: flex;
+    flex-direction: column;
+}
+
+.Img2{
+    width: 250px;
+}
+
+.Img2 > img{
+    width: 300px;
+    border-radius: 5px;
+}
+
+.titulo2{
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    color: #084C61;
+    width: 600px;
+    padding: 0px 0 10px 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+.desc2{
+    width: 600px;
+    font-size: 20px;
+    text-align: justify;
+    color:#5e5e5e;
+    line-height: 22px;
+}
+
+.cant2{
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.p_minima2{
+    font-size: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    width: 600px;
+    padding: 5px 0 5px 0;
+    align-items: center;
+    background: #084C61;
+    text-decoration: none;
+}
+
+.precio2{
+    font-size: 25px;
+    color:rgb(255, 255, 255);
+    background: #DB3A34;
+    font-weight: bolder;
+    width: 600px;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    margin-bottom: 20px;
+    vertical-align: center;
+}
+
+.stockcount{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.contador_producto{
+    width: 100px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.stock{
+    color:#084C61;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
