@@ -9,16 +9,16 @@ const CartProvider = ({ children }) => {
     return cart.some((product) => product.id === id);
     };
 
-    const addToCart = (product, quantity) => {
+    const addToCart = (product, cantidad) => {
         if (isInCart(product.id)) {
-        alert('Su producto ya se encuentra en el carrito');
+        alert('El producto ya se encuentra en el carrito');
         } else {
-        setCart([...cart, { ...product, quantity }]);
+        setCart([...cart, { ...product, cantidad }]);
         }
     };
 
     const clear = () => {
-    setCart([]);
+        setCart([]);
     };
     return (
     <cartContext.Provider value={{ cart, addToCart }}>

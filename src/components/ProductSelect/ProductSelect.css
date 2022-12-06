@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
 
 .navProducts{
-    width: 80%;
+    width: 65%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -9,7 +9,7 @@
 }
 
 .title_productos{
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bolder;
     text-align: center;
     text-transform: uppercase;
@@ -18,12 +18,11 @@
 }
 
 .title_productos2{
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: #8a8a8a;
-    text-transform: uppercase;
-
+    font-family: Roboto condensed, sans-serif;
 }
 
 .lista_categorias{
@@ -32,6 +31,7 @@
     grid-template-rows: repeat(2, 1fr);
     text-align: center;
     margin: 0 auto;
+    gap: 10px;
 }
 
 .categorias{

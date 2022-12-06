@@ -18,9 +18,7 @@ const ItemListContainer = () => {
                 querySnapshot, 
                 where("categoria", "==", categoryName)
             )
-
             // Esta data se obtiene de este modo porque Firestore asi lo define...
-
             getDocs(queryFilter) // El metodo getDocs nos retorna una promesa entonces podemos hacer la encadenacion con el .then y el .catch
             .then((response) => {  // Le ponemos un callback y como argumente recibe la respuesta y dentro de las llaves lo que va a ejecutar...
             const data = response.docs.map((item) => { //El map recorre el arreglo y retorna un nuevo arreglo y se obtiene cada uno de los objetos con la propiedad id.
@@ -30,13 +28,11 @@ const ItemListContainer = () => {
             });
             console.log(data);
             setItems(data) // una vez que se procesa la data proveniente de firebase se guarda en el useState "setItems"...
-            
         })
             .catch((error) =>{ //Se coloca el .catch en caso de que se produjera algun error al traer la data de firebase asi podemos saber cual es el problema...
             console.log(error);         
             });
         }else{
-        
             getDocs(querySnapshot)
             .then((response) => {
                 const data = response.docs.map((item) => {
@@ -46,7 +42,6 @@ const ItemListContainer = () => {
                 });
                 console.log(data);
                 setItems(data)
-                
             })
             .catch((error) =>{
                 console.log(error);        

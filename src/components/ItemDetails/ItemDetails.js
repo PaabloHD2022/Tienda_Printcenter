@@ -2,9 +2,14 @@ import React from 'react';
 import './ItemDetails.css';
 import ItemCount from '../ItemCount/ItemCount';
 import ProductSelect from '../ProductSelect/ProductSelect';
+import { useState, useContext, } from 'react';
+import { cartContext} from '../../Context/CartProvider';
 
 const ItemDetails = ({selectedProduct}) => {
-    
+    const [count, setCount] = useState(1);
+    const { cart, addToCart } = useContext(cartContext)
+    console.log(selectedProduct);
+
     return (
         <>
         <div className='productSelect'>
@@ -21,7 +26,10 @@ const ItemDetails = ({selectedProduct}) => {
                 <p className='precio2'>Precio: ${selectedProduct.precio}</p>
                 <div className='stockcount'>
                     <p className='stock'>Stock: {selectedProduct.stock}</p>
-                    <ItemCount />
+                    <h2>{ count }</h2>
+                    <ItemCount setCount={setCount} />
+                    <button onClick={() => addToCart (selectedProduct, count)}> Agregar al Carrito </button>
+                    <h3>Cantidad de productos en el carrito {cart.length}</h3>
                 </div>
             </div>
         </div>
